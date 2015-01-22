@@ -12,7 +12,8 @@
 
 	<!-- JS -->
 	<script src="libs/angular/angular.min.js"></script>
-	<script src="libs/angular-route/angular-route.min.js"></script>
+	<!--<script src="libs/angular-route/angular-route.min.js"></script>-->
+	<script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
 
 
 
@@ -23,6 +24,7 @@
 	<script src="js/controllers/ProjsCtrl.js"></script>
 	<script src="js/controllers/GeekCtrl.js"></script>
 	<script src="js/controllers/AboutCtrl.js"></script>
+	<script src="js/controllers/ScotchCtrl.js"></script>
 
 
 	<script src="js/services/NerdService.js"></script>
@@ -36,20 +38,29 @@
 	<!-- HEADER -->
 	<nav class="navbar navbar-inverse">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="/">Cooper's Will</a>
+			<a class="navbar-brand" ui-sref="#">Cooper's Will</a>
 		</div>
 		<ul class="nav navbar-nav">
 
-			<li><a href="/about">About Us</a></li>
-			<li><a href="/projects">Projects</a></li>
-			<li><a href="/contact">Contact Us</a></li>
-			<li><a href="/blog">Blog</a></li>
+			<li><a ui-sref="about">About Us</a></li>
+			<li><a ui-sref="projects">Projects</a></li>
+			<li><a ui-sref="contact">Contact Us</a></li>
+			<li><a ui-sref="blog">Blog</a></li>
+			<li><a ui-sref="homie">Homie</a></li>
+        	<li><a ui-sref="abouti">Abouti</a></li>
+
 
 		</ul>
 	</nav>
 
 	<!-- ANGULAR DYNAMIC CONTENT -->
-	<div ng-view></div>
+	<div ui-view></div>
+
+<div class="text-center">
+    <p> <a href="http://cooper.edu" target="_blank">Cooper Union</a></p>
+</div>
+
+
 
 </div>
 </body>
