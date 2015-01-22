@@ -4,10 +4,11 @@ var gzippo = require('gzippo');
 var app            = express();
 var mongoose       = require('mongoose');
 var bodyParser     = require('body-parser');
-var methodOverride = require('method-override');
+var methodOverride = require('method-override')
+
 
 // configuration ===========================================
-	
+
 // config files
 var db = require('./config/db');
 
@@ -17,7 +18,7 @@ var contactus = require('./app/routes/contactus');
 mongoose.connect(db.url); //mongodb://victor:victsor@ds031661.mongolab.com:31661/heroku_app26810511/test');
 
 var port = process.env.PORT || 8080; // set our port
-// mongoose.connect(db.url); // connect to our mongoDB database (commented out after you enter in your own credentials)
+
 
 // get all data/stuff of the body (POST) parameters
 app.use(bodyParser.json()); // parse application/json 
