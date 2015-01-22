@@ -9,7 +9,7 @@ $scope.emailus = function() {
 			// people can't just hold enter to keep adding the same to-do anymore
 	var atpos = $scope.email.indexOf("@");
     var dotpos = $scope.email.lastIndexOf(".");
-    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=$scope.email.length) {
 
         $scope.tagline = "message not sent, need valid email format";
         
