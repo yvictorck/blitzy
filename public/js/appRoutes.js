@@ -39,7 +39,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 // angular.module('appRoutes',[]).config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider) {
 
 
-$urlRouterProvider.otherwise('#');
+$urlRouterProvider.otherwise('/');
  
     $stateProvider
         
