@@ -1,4 +1,4 @@
-var app =angular.module('sampleApp', ['ui.router', 'appRoutes', 'ScotchCtrl','MainCtrl', 'NerdCtrl','ProjsCtrl','AboutCtrl', 'NerdService', 'GeekCtrl', 'GeekService']);
+var app =angular.module('sampleApp', ['ui.router', 'appRoutes', 'ScotchCtrl','MainCtrl', 'BlogCtrl','ProjsCtrl','AboutCtrl', 'BlogService', 'ContactusCtrl', 'ContactusService']);
 
 		app.filter('reverse', function() {
 			  return function(items) {

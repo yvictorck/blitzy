@@ -85,9 +85,9 @@ $urlRouterProvider.otherwise('/');
 		})
 
 		.state('blog', {
-			url:'/blofg',
-			templateUrl: 'views/nerd.html',
-			controller: 'NerdController'
+			url:'/blog',
+			templateUrl: 'views/blog.html',
+			controller: 'BlogController'
 		})
 		.state('projects', {
 			url:'/projects',
@@ -97,8 +97,8 @@ $urlRouterProvider.otherwise('/');
 
 		.state('contact', {
 			url:'/contact',
-			templateUrl: 'views/geek.html',
-			controller: 'GeekController'	
+			templateUrl: 'views/contactus.html',
+			controller: 'ContactusController'	
 		})
 		.state('about', {
 			url:'/about',

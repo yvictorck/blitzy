@@ -13,7 +13,7 @@ var methodOverride = require('method-override')
 var db = require('./config/db');
 
 var routes = require('./app/routes/index');
-var nerds = require('./app/routes/nerd');
+var blog = require('./app/routes/blog');
 var contactus = require('./app/routes/contactus');
 mongoose.connect(db.url); //mongodb://victor:victsor@ds031661.mongolab.com:31661/heroku_app26810511/test');
 
@@ -30,7 +30,7 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-M
 
 app.use(gzippo.staticGzip('' + __dirname + '/public'));
 // app.use('/', routes);
-app.use('/nerds', nerds);
+app.use('/blog', blog);
 app.use('/contactus',contactus)
 
 
