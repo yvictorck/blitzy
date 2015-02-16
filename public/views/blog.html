@@ -1,0 +1,54 @@
+<div class="jumbotron text-center">
+	<h2>Nice little Blog</h2>
+
+	<p>{{ tagline }}</p>
+
+<!--  -->
+<div class="row">
+  <div class="col-md-6" style="margin-top:30px;">
+
+        <div style="margin-top:30px;" ng-repeat="blogpost in blogposts.slice().reverse()">
+        <p>Title: {{blogpost.title}}</p>
+        <p>Content: {{blogpost.content}}</p>
+        <p>-------------------------------------</p>
+
+      </div>
+
+  </div>
+
+
+  <div class="col-md-6" style="margin-top:30px;">
+  <form ng-submit="createBlog()">
+        <h3>Add a blog entry</h3>
+
+        <div class="form-group">
+          <input type="text"
+            class="form-control"
+            placeholder="title"
+            ng-model="title"></input>
+        </div>
+        <div class="form-group">
+          <input type="text"
+          class="form-control"
+          placeholder="content"
+          ng-model="content"></input>
+        </div>
+        <button type="submit" class="btn btn-primary">create</button>
+      </form>
+
+<p style="margin-top:30px;">Search: <input ng-model="searchText"></p>
+
+
+
+        <div style="margin-top:30px;" ng-repeat="blogpost in blogposts | filter:searchText", ng-show="searchText">
+        <p>Result Title: {{blogpost.title}}</p>
+        <p>Result Content: {{blogpost.content}}</p>
+        <p>===============================</p>
+
+      </div>
+
+
+  </div>
+</div>
+
+</div>
