@@ -7,7 +7,7 @@
 <div class="row">
   <div class="col-md-6" style="margin-top:30px;">
 
-        <div style="margin-top:30px;" ng-repeat="blogpost in blogposts.slice().reverse()">
+        <div style="margin-top:30px;" ng-repeat="blogpost in blogposts">
         <p>Title: {{blogpost.title}}</p>
         <p>Content: {{blogpost.content}}</p>
         <p>-------------------------------------</p>
@@ -25,7 +25,7 @@
           <input type="text"
             class="form-control"
             placeholder="title"
-            ng-model="title"></input>
+            ng-model="titles"></input>
         </div>
         <div class="form-group">
           <input type="text"
@@ -33,7 +33,7 @@
           placeholder="content"
           ng-model="content"></input>
         </div>
-        <button type="submit" class="btn btn-primary">create</button>
+        <button type="submit" class="btn btn-warn">create</button>
       </form>
 
 <p style="margin-top:30px;">Search: <input ng-model="searchText"></p>
