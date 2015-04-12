@@ -14,6 +14,7 @@ var db = require('./config/db');
 
 var routes = require('./app/routes/index');
 var blog = require('./app/routes/blog');
+var blitz = require('./app/routes/blitz');
 var contactus = require('./app/routes/contactus');
 mongoose.connect(db.url); //mongodb://victor:victsor@ds031661.mongolab.com:31661/heroku_app26810511/test');
 
@@ -31,6 +32,7 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-M
 app.use(gzippo.staticGzip('' + __dirname + '/public'));
 // app.use('/', routes);
 app.use('/blog', blog);
+app.use('/blitz', blitz);
 app.use('/contactus',contactus)
 
 

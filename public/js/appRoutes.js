@@ -104,6 +104,10 @@ $urlRouterProvider.otherwise('/');
 			url:'/about',
 			templateUrl: 'views/about.html',
 			controller: 'AboutController'	
-		});
-        
+		})
+        .state('blitz', {
+            url:'/blitz',
+            templateUrl: 'views/blitz.html',
+            controller: 'BlitzController'   
+        });
 });
