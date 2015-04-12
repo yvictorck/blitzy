@@ -50,12 +50,14 @@
 
 
 
-
       <table class="table table-hover">
+            <tr>
+            <td class="danger"><b>Past Games</b></td>
+            </tr>
 
           <tbody ng-repeat="blitzpost in blitzposts | reverse">
       <tr>
-      <td class="danger">{{blitzpost.gametime}}</td>
+      <td class="info">{{blitzpost.gametime}}</td>
       </tr>
             <tr >
                <td>kyung</td> <td ng-repeat="score in blitzpost.kyung">{{score}}</td>
