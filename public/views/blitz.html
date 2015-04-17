@@ -6,22 +6,54 @@
   <!--  -->
   <div class="row">
     <div class="col-md-10" style="margin-top:30px;">
-<!-- <div ng-repeat="score1 in currentblitz.kyung">
-  <p>{{score1}}</p>
-  <p><b>{{currentblitz.kyung_total}}</b></p>
-</div>
-<div ng-repeat="score1 in currentblitz.mina">
-  <p>{{score1}}</p>
-  <p><b>{{currentblitz.mina_total}}</b></p>
-</div>
-<div ng-repeat="score1 in currentblitz.jess">
-  <p>{{score1}}</p>
-  <p><b>{{currentblitz.jess_total}}</b></p>
-</div>
-<div ng-repeat="score1 in currentblitz.vic">
-  <p>{{score1}}</p>
-  <p><b>{{currentblitz.vic_total}}</b></p>
-</div> -->
+
+<!--       <div ng-repeat="score1 in currentblitz.kyung">
+        <p>{{score1}}</p>
+      </div>
+      <p><b>kyung: {{currentblitz.kyung_total}}</b></p>
+
+      <div ng-repeat="score1 in currentblitz.mina">
+        <p>{{score1}}</p>
+      </div>
+      <p><b>mina: {{currentblitz.mina_total}}</b></p>
+
+      <div ng-repeat="score1 in currentblitz.jess">
+        <p>{{score1}}</p>
+      </div>
+      <p><b>jess: {{currentblitz.jess_total}}</b></p>
+
+      <div ng-repeat="score1 in currentblitz.vic">
+        <p>{{score1}}</p>
+      </div>
+       <p><b>vic: {{currentblitz.vic_total}}</b></p> -->
+     <!--  <table class="table table-hover">
+
+          <tbody >
+            <tr>
+            <td class="testing"><b>Current Game</b></td>
+            </tr>
+            <tr >
+               <td>test1</td>
+               <td>{{test.t1}}</td>
+               <td data-ng-repeat="score1 in test.t1">{{score1}}</td>
+               <td ><b>{{test.t1.length}}</b></td>
+
+            </tr>
+            <tr >
+               <td>test2</td>
+               <td>{{test.t2}}</td>
+
+               <td data-ng-repeat="score1 in test.t2">{{score1}}</td>
+
+
+               <td ><b>{{test.t2.length}}</b></td>
+
+            </tr>
+
+          </tbody>
+          
+      </table> -->
+
       <table class="table table-hover">
 
           <tbody >
@@ -29,22 +61,33 @@
             <td class="success"><b>Current Game</b></td>
             </tr>
             <tr >
-               <td>kyung</td> <td ng-repeat="score1 in getkyung()">{{score1}}</td>
+               <td>kyung</td> 
+               <td>{{currentblitz.kyung}}</td>
                <td ><b>{{currentblitz.kyung_total}}</b></td>
+               <!-- <td ><b>{{currentblitz.kyung.length}}</b></td> -->
             </tr>
             <tr >
-               <td>mina</td> <td ng-repeat="score2 in getmina()">{{score2}}</td>
+               <td>mina</td> 
+               <td>{{currentblitz.mina}}</td>
                <td ><b>{{currentblitz.mina_total}}</b></td>
+               <!-- <td ><b>{{currentblitz.mina.length}}</b></td> -->
+
             </tr>
             <tr >
-               <td>jess</td> <td ng-repeat="score3 in getjess()">{{score3}}</td>
+               <td>jess</td> 
+               <td>{{currentblitz.jess}}</td>
                <td ><b>{{currentblitz.jess_total}}</b></td>
+               <!-- <td ><b>{{currentblitz.jess.length}}</b></td> -->
             </tr>
             <tr >
-               <td>vic</td> <td ng-repeat="score4 in getvic()">{{score4}}</td>
+               <!--<td>vic</td> <td ng-repeat="score4 in currentblitz.vic">{{score4}}</td>-->
+               <td>vic</td> 
+               <td>{{currentblitz.vic}}</td>
                <td ><b>{{currentblitz.vic_total}}</b></td>
+               <!-- <td ><b>{{currentblitz.vic.length}}</b></td> -->
             </tr>
           </tbody>
+          
       </table>
 
 
@@ -61,6 +104,7 @@
       </tr>
             <tr >
                <td>kyung</td> <td ng-repeat="score in blitzpost.kyung">{{score}}</td>
+                <!-- <td>kyung</td><td >{{blitzpost.kyung}}</td> -->
                <td ><b>{{blitzpost.kyung_total}}</b></td>
             </tr>
             <tr >
