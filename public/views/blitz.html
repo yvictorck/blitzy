@@ -1,4 +1,4 @@
-<div class="jumbotron text-center" style="font-size:250%;">
+<div class="jumbotron text-center" >
 	<h2>Nice little Blitz</h2>
 
 	<p>{{ tagline }}</p>
@@ -54,7 +54,7 @@
           
       </table> -->
 
-      <table class="table table-hover">
+      <table class="table table-hover" style="font-size:250%;">
 
           <tbody >
             <tr>
@@ -93,7 +93,7 @@
 
 
 
-      <table class="table table-hover">
+      <table class="table table-hover" style="font-size:150%;">
             <tr>
             <td class="danger"><b>Past Games</b></td>
             </tr>
@@ -166,7 +166,32 @@
 
         <button type="submit" class="btn btn-info" ng-click="enter_one_round_blitz()">enter one round</button>
       <!-- </form> -->
+       <h3>Change a blitz round</h3>
+        <div class="form-group">
+          <input type="text"
+          class="form-control"
+          placeholder="which round"
+          ng-model="which_round"></input>
+          <input type="text"
+          class="form-control"
+          placeholder="kyung"
+          ng-model="kyung_change_one_round"></input>
+          <input type="text"
+          class="form-control"
+          placeholder="mina"
+          ng-model="mina_change_one_round"></input>
+          <input type="text"
+          class="form-control"
+          placeholder="jess"
+          ng-model="jess_change_one_round"></input>
+          <input type="text"
+          class="form-control"
+          placeholder="vic"
+          ng-model="vic_change_one_round"></input>
+        </div>
 
+
+        <button type="submit" class="btn btn-info" ng-click="change_one_round_blitz()">change one round</button>
     </div>
 
 
