@@ -81,16 +81,16 @@ angular.module('BlitzCtrl', []).controller('BlitzController', function($scope,$h
 
 
 
-			if($scope.kyung_delta=='undefined') kyung_delta = ka[round];
+			if($scope.kyung_delta==undefined) kyung_delta = ka[round];
 			else kyung_delta = parseInt($scope.kyung_change_one_round);
 
-			if($scope.mina_delta=='undefined') mina_delta = ma[round];
+			if($scope.mina_delta==undefined) mina_delta = ma[round];
 			else mina_delta = parseInt($scope.jess_change_one_round);
 
-			if($scope.jess_delta=='undefined') jess_delta = ja[round];
+			if($scope.jess_delta==undefined) jess_delta = ja[round];
 			else jess_delta = parseInt($scope.mina_change_one_round);
 
-			if($scope.vic_delta=='undefined') vic_delta = va[round]; 
+			if($scope.vic_delta==undefined) vic_delta = va[round]; 
 			else vic_delta = parseInt($scope.vic_change_one_round);
 
 		    ka.splice(round,1);
