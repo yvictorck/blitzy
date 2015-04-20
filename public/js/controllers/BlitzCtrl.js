@@ -86,10 +86,10 @@ angular.module('BlitzCtrl', []).controller('BlitzController', function($scope,$h
 			if($scope.kyung_change_one_round === undefined) kyung_delta = ka[round];
 			else kyung_delta = parseInt($scope.kyung_change_one_round);
 
-			if($scope.jess_change_one_round === undefined) mina_delta = ma[round];
+			if($scope.mina_change_one_round === undefined) mina_delta = ma[round];
 			else mina_delta = parseInt($scope.mina_change_one_round);
 
-			if($scope.mina_change_one_round === undefined) jess_delta = ja[round];
+			if($scope.jess_change_one_round === undefined) jess_delta = ja[round];
 			else jess_delta = parseInt($scope.jess_change_one_round);
 
 			if($scope.vic_change_one_round === undefined) vic_delta = va[round]; 
@@ -155,7 +155,7 @@ angular.module('BlitzCtrl', []).controller('BlitzController', function($scope,$h
 						// $scope.mina_arr.push(newBlitz.mina);
 						// $scope.jess_arr.push(newBlitz.jess);
 						// $scope.vic_arr.push(newBlitz.vic);
-						
+
 					ka.push(parseInt($scope.kyung_one_round));
 					ma.push(parseInt($scope.mina_one_round));
 					ja.push(parseInt($scope.jess_one_round));
