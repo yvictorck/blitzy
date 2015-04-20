@@ -8,9 +8,9 @@ angular.module('BlitzCtrl', []).controller('BlitzController', function($scope,$h
 		$scope.vic_arr = [];
 		$scope.tagline = 'asdf';
 
-   $scope.test = {};
-   $scope.test.t1 = [];
-   $scope.test.t2 = [];
+	   $scope.test = {};
+	   $scope.test.t1 = [];
+	   $scope.test.t2 = [];
 
 		var ka = [];
 		var ma = [];
@@ -77,20 +77,22 @@ angular.module('BlitzCtrl', []).controller('BlitzController', function($scope,$h
 			var round, kyung_delta, mina_delta, jess_delta, vic_delta;
 
 			round = parseInt($scope.which_round)-1;
+			if($scope.which_round==="last") round = ka.length-1;
+			if($scope.which_round===undefined) round = ka.length-1;
 
 
 
 
-			if($scope.kyung_delta==undefined) kyung_delta = ka[round];
+			if($scope.kyung_change_one_round === undefined) kyung_delta = ka[round];
 			else kyung_delta = parseInt($scope.kyung_change_one_round);
 
-			if($scope.mina_delta==undefined) mina_delta = ma[round];
-			else mina_delta = parseInt($scope.jess_change_one_round);
+			if($scope.jess_change_one_round === undefined) mina_delta = ma[round];
+			else mina_delta = parseInt($scope.mina_change_one_round);
 
-			if($scope.jess_delta==undefined) jess_delta = ja[round];
-			else jess_delta = parseInt($scope.mina_change_one_round);
+			if($scope.mina_change_one_round === undefined) jess_delta = ja[round];
+			else jess_delta = parseInt($scope.jess_change_one_round);
 
-			if($scope.vic_delta==undefined) vic_delta = va[round]; 
+			if($scope.vic_change_one_round === undefined) vic_delta = va[round]; 
 			else vic_delta = parseInt($scope.vic_change_one_round);
 
 		    ka.splice(round,1);
@@ -103,45 +105,39 @@ angular.module('BlitzCtrl', []).controller('BlitzController', function($scope,$h
 		    ja.splice(round, 0, jess_delta);
 		    va.splice(round, 0, vic_delta);
 		    
-		    $scope.kyung_change_one_round ="";
-		    $scope.mina_change_one_round ="";
-		    $scope.jess_change_one_round ="";
-		    $scope.vic_change_one_round ="";
-		    $scope.which_round ="";
+		    $scope.kyung_change_one_round = undefined;
+		    $scope.mina_change_one_round = undefined;
+		    $scope.jess_change_one_round = undefined;
+		    $scope.vic_change_one_round = undefined;
+		    $scope.which_round = undefined;
 
-					var kyung_total = 0;
-					var mina_total = 0;
-					var jess_total = 0;
-					var vic_total = 0;
-					for(var j=0;j<ka.length;j++) 
+			var kyung_total = 0;
+			var mina_total = 0;
+			var jess_total = 0;
+			var vic_total = 0;
+			for(var j=0;j<ka.length;j++) 
+			{
+				kyung_total+=parseInt(ka[j]);
+				mina_total+=parseInt(ma[j]);
+				jess_total+=parseInt(ja[j]);
+				vic_total+=parseInt(va[j]);
+			}
+			// for(var j=0;j<$scope.mina_arr.length;j++) mina_total+=parseInt($scope.mina_arr[j]);
+			// for(var j=0;j<$scope.jess_arr.length;j++) jess_total+=parseInt($scope.jess_arr[j]);
+			// for(var j=0;j<$scope.vic_arr.length;j++) vic_total+=parseInt($scope.vic_arr[j]);
 
-					{
+				var current =  {
+				kyung:ka,
+				mina:ma,
+				jess:ja,
+				vic:va,
+				kyung_total:kyung_total,
+				mina_total:mina_total,
+				jess_total:jess_total,
+				vic_total:vic_total
+			};
 
-						kyung_total+=parseInt(ka[j]);
-						mina_total+=parseInt(ma[j]);
-						jess_total+=parseInt(ja[j]);
-						vic_total+=parseInt(va[j]);
-
-
-
-
-					}
-					// for(var j=0;j<$scope.mina_arr.length;j++) mina_total+=parseInt($scope.mina_arr[j]);
-					// for(var j=0;j<$scope.jess_arr.length;j++) jess_total+=parseInt($scope.jess_arr[j]);
-					// for(var j=0;j<$scope.vic_arr.length;j++) vic_total+=parseInt($scope.vic_arr[j]);
-
-						var current =  {
-						kyung:ka,
-						mina:ma,
-						jess:ja,
-						vic:va,
-						kyung_total:kyung_total,
-						mina_total:mina_total,
-						jess_total:jess_total,
-						vic_total:vic_total
-					};
-
-					    $scope.currentblitz = current;
+			$scope.currentblitz = current;
 
 
 
@@ -155,16 +151,15 @@ angular.module('BlitzCtrl', []).controller('BlitzController', function($scope,$h
 						"jess":parseInt($scope.jess_one_round),
 						"vic":parseInt($scope.vic_one_round)
 					};
-
-
 						// $scope.kyung_arr.push(newBlitz.kyung);
 						// $scope.mina_arr.push(newBlitz.mina);
 						// $scope.jess_arr.push(newBlitz.jess);
 						// $scope.vic_arr.push(newBlitz.vic);
-						ka.push(parseInt($scope.kyung_one_round));
-						ma.push(parseInt($scope.mina_one_round));
-						ja.push(parseInt($scope.jess_one_round));
-						va.push(parseInt($scope.vic_one_round));
+						
+					ka.push(parseInt($scope.kyung_one_round));
+					ma.push(parseInt($scope.mina_one_round));
+					ja.push(parseInt($scope.jess_one_round));
+					va.push(parseInt($scope.vic_one_round));
 
 
 					var kyung_total = 0;
