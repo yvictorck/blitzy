@@ -206,7 +206,8 @@ angular.module('BlitzCtrl', []).controller('BlitzController', function($scope,$h
 					  // $scope.mina_total = mina_total;
 					  // $scope.jess_total = jess_total;
 					  // $scope.vic_total = vic_total;
-					  $scope.tagline = current;
+					  
+					  // $scope.tagline = current;
 						$scope.kyung_one_round = "";
 						$scope.mina_one_round = "";
 						$scope.jess_one_round ="";
