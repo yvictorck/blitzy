@@ -1,7 +1,7 @@
 <div class="jumbotron text-center" >
-	<h2>Nice little Blitz</h2>
+  <h2>Nice little Blitz</h2>
 
-	<p>{{ tagline }}</p>
+  <p>{{ tagline }}</p>
 
   <!--  -->
   <div class="row">
@@ -61,28 +61,34 @@
             <td class="success"><b>Current Game</b></td>
             </tr>
             <tr >
+               <td>kyung</td> <td ng-repeat="score in currentblitz.kyung track by $index">{{score}}</td>
+<!-- 
                <td>kyung</td> 
-               <td>{{currentblitz.kyung}}</td>
+               <td>{{currentblitz.kyung}}</td> -->
                <td ><b>{{currentblitz.kyung_total}}</b></td>
                <!-- <td ><b>{{currentblitz.kyung.length}}</b></td> -->
             </tr>
             <tr >
-               <td>mina</td> 
-               <td>{{currentblitz.mina}}</td>
+               <td>mina</td> <td ng-repeat="score in currentblitz.mina track by $index">{{score}}</td>
+
+<!--                <td>mina</td> 
+               <td>{{currentblitz.mina}}</td> -->
                <td ><b>{{currentblitz.mina_total}}</b></td>
                <!-- <td ><b>{{currentblitz.mina.length}}</b></td> -->
 
             </tr>
             <tr >
+               <td>jess</td> <td ng-repeat="score in currentblitz.jess track by $index">{{score}}</td>
+<!--             
                <td>jess</td> 
-               <td>{{currentblitz.jess}}</td>
+               <td>{{currentblitz.jess}}</td> -->
                <td ><b>{{currentblitz.jess_total}}</b></td>
                <!-- <td ><b>{{currentblitz.jess.length}}</b></td> -->
             </tr>
             <tr >
-               <!--<td>vic</td> <td ng-repeat="score4 in currentblitz.vic">{{score4}}</td>-->
-               <td>vic</td> 
-               <td>{{currentblitz.vic}}</td>
+               <td>vic</td> <td ng-repeat="score in currentblitz.vic track by $index">{{score}}</td>
+<!--                <td>vic</td> 
+               <td>{{currentblitz.vic}}</td> -->
                <td ><b>{{currentblitz.vic_total}}</b></td>
                <!-- <td ><b>{{currentblitz.vic.length}}</b></td> -->
             </tr>
@@ -103,22 +109,22 @@
       <td class="info">{{blitzpost.gametime}}</td>
       </tr>
             <tr >
-               <td>kyung</td> <td ng-repeat="score in blitzpost.kyung">{{score}}</td>
+               <td>kyung</td> <td ng-repeat="score in blitzpost.kyung  track by $index">{{score}}</td>
                 <!-- <td>kyung</td><td >{{blitzpost.kyung}}</td> -->
                <td ><b>{{blitzpost.kyung_total}}</b></td>
             </tr>
             <tr >
-               <td>mina</td> <td ng-repeat="score in blitzpost.mina">{{score}}</td>
+               <td>mina</td> <td ng-repeat="score in blitzpost.mina  track by $index">{{score}}</td>
                <td ><b>{{blitzpost.mina_total}}</b></td>
 
             </tr>
             <tr >
-               <td>jess</td> <td ng-repeat="score in blitzpost.jess">{{score}}</td>
+               <td>jess</td> <td ng-repeat="score in blitzpost.jess  track by $index">{{score}}</td>
                <td ><b>{{blitzpost.jess_total}}</b></td>
 
             </tr>
             <tr >
-               <td>vic</td> <td ng-repeat="score in blitzpost.vic">{{score}}</td>
+               <td>vic</td> <td ng-repeat="score in blitzpost.vic  track by $index">{{score}}</td>
                <td ><b>{{blitzpost.vic_total}}</b></td>
 
             </tr>
